@@ -1,0 +1,33 @@
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f4f6f9;
+}
+
+.error-page h1 {
+    font-size: 120px;
+    color: #ff7a00;
+    margin: 0;
+}
+
+.error-page h2 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.error-page p {
+    color: #555;
+}
+
+.btn-error {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #0b2c4d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}

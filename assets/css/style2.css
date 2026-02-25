@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f6f8fb;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.header {
+    background: #0b2d50;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* MAIN */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main h2 {
+    margin-bottom: 20px;
+    color: #0b2d50;
+}
+
+/* FORM */
+form {
+    background: white;
+    padding: 30px;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+form label {
+    font-weight: 500;
+    color: #555;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+form input:focus {
+    border-color: #0b2d50;
+}
+
+form button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #0b2d50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+form button:hover {
+    opacity: 0.9;
+}
+
+/* LINK */
+main p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+main a {
+    color: #f58220;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #0b2d50;
+    color: white;
+    font-size: 14px;
+}

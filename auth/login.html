@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar sesión | Bussimindness</title>
+  <link rel="stylesheet" href="../assets/css/style2.css">
+
+  <!-- reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+<header class="header">
+  <h1>Bussimindness</h1>
+</header>
+
+<main>
+  <h2>Iniciar sesión</h2>
+
+  <form action="login.php" method="POST">
+    <label>Email</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Contraseña</label><br>
+    <input type="password" name="password" required><br><br>
+
+    <!-- CAPTCHA -->
+    <div class="g-recaptcha"
+         data-sitekey="6Lev-mMsAAAAAA2SevQLqQ0SZuhMRfciIXymvA3f">
+    </div>
+    <br>
+
+    <button type="submit">Ingresar</button>
+  </form>
+
+  <p>¿No tienes cuenta?
+    <a href="register.html">Regístrate aquí</a>
+  </p>
+</main>
+
+<footer>
+  <p>© 2026 Bussimindness</p>
+</footer>
+
+</body>
+</html>

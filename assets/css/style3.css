@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.error-box{
+  display:none;
+  margin-top:15px;
+  padding:12px;
+  background:#ffe5e5;
+  border:1px solid red;
+  color:#a10000;
+  border-radius:6px;
+  font-weight:bold;
+}
+
+body {
+    background: #f6f8fb;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.header {
+    background: #0b2d50;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* MAIN */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD */
+.register-container {
+    background: white;
+    padding: 35px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0b2d50;
+}
+
+/* FORM */
+form label {
+    font-weight: 500;
+    color: #555;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+form input:focus {
+    border-color: #0b2d50;
+    outline: none;
+}
+
+/* BUTTON */
+form button {
+    width: 100%;
+    padding: 12px;
+    background: #f58220;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+form button:hover {
+    opacity: 0.9;
+}
+
+/* LINK */
+.register-container p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-container a {
+    color: #0b2d50;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #0b2d50;
+    color: white;
+    font-size: 14px;
+}
