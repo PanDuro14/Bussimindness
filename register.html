@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro | Bussimindness</title>
+  <link rel="stylesheet" href="../assets/css/style3.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Bussimindness</h1>
+</header>
+
+<main>
+  <div class="register-container">
+
+    <h2>Crear cuenta</h2>
+
+    <form action="register.php" method="POST">
+
+      <label>Nombre</label>
+      <input type="text" name="nombre" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Contraseña</label>
+      <input type="password" name="password" required>
+
+      <label>Confirmar contraseña</label>
+      <input type="password" name="confirm_password" required>
+
+      <button type="submit">Registrarse</button>
+    </form>
+
+    <!-- 🔴 RECUADRO DE ERROR -->
+    <div id="mensaje-error" class="error-box"></div>
+
+    <p>
+      ¿Ya tienes cuenta?
+      <a href="login.php">Inicia sesión</a>
+    </p>
+
+  </div>
+</main>
+
+<footer>
+  <p>© 2024 Bussimindness</p>
+</footer>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const error = params.get("error");
+const box = document.getElementById("mensaje-error");
+
+if(error){
+    box.style.display="block";
+}
+
+if (error === "pass") {
+    box.textContent = "Las contraseñas no coinciden";
+}
+
+if (error === "email") {
+    box.textContent = "El correo ya está registrado";
+}
+
+if (error === "server") {
+    box.textContent = "Error en el servidor";
+}
+</script>
+
+</body>
+</html>
