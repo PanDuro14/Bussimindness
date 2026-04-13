@@ -267,8 +267,8 @@ img { display: block; }
             <a href="perfil/perfil.php" class="btn btn-login">Mi perfil</a>
             <a href="productos/producto.php" class="btn btn-publish">+ Publicar</a>
         <?php else: ?>
-            <a href="auth/login.html" class="btn btn-login">Ingresar</a>
-            <a href="auth/register.html" class="btn btn-register">Registro</a>
+            <a href="auth/login.php" class="btn btn-login">Ingresar</a>
+            <a href="auth/register.php" class="btn btn-register">Registro</a>
         <?php endif; ?>
     </div>
 </header>

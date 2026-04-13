@@ -238,7 +238,7 @@ $vendidos  = count(array_filter($productos, fn($p) => $p['estado'] === 'vendido'
     </nav>
     <div style="display:flex;gap:10px;align-items:center;">
         <a href="../productos/producto.php" class="btn-publish">+ Publicar</a>
-        <a href="../logout.php" style="color:rgba(255,255,255,.6);font-size:.85rem;">Salir</a>
+        <a href="../auth/logout.php" style="color:rgba(255,255,255,.6);font-size:.85rem;">Salir</a>
     </div>
 </header>
 
