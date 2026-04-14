@@ -405,7 +405,7 @@ img { display: block; }
             <h2>¿Tienes algo que vender?</h2>
             <p>Crea tu cuenta gratis y publica en menos de 2 minutos</p>
         </div>
-        <a href="auth/register.html" class="btn-cta">Empieza gratis →</a>
+        <a href="auth/register.php" class="btn-cta">Empieza gratis →</a>
     </div>
 </div>
 <?php endif; ?>
