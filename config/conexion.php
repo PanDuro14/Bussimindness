@@ -1,28 +1,26 @@
 <?php
 // ============================================================
 //  config/conexion.php
-//  Funciona en XAMPP (localhost) Y en Railway automáticamente
 // ============================================================
 
-// Railway inyecta estas variables de entorno automáticamente
-// cuando conectas un plugin de MySQL/PostgreSQL
-$host = $_ENV['MYSQLHOST']     ?? getenv('MYSQLHOST')     ?? 'localhost';
-$db   = $_ENV['MYSQLDATABASE'] ?? getenv('MYSQLDATABASE') ?? 'bussimindness';
-$user = $_ENV['MYSQLUSER']     ?? getenv('MYSQLUSER')     ?? 'root';
-$pass = $_ENV['MYSQLPASSWORD'] ?? getenv('MYSQLPASSWORD') ?? '';
-$port = $_ENV['MYSQLPORT']     ?? getenv('MYSQLPORT')     ?? '3306';
+// Railway usa getenv(), no $_ENV directamente
+$host = getenv('MYSQLHOST')     ?: 'localhost';
+$db   = getenv('MYSQLDATABASE') ?: 'bussimindness';
+$user = getenv('MYSQLUSER')     ?: 'root';
+$pass = getenv('MYSQLPASSWORD') ?: '';
+$port = (int)(getenv('MYSQLPORT') ?: 3306);
 
-// ── MySQLi (código original) ───────────────────────────────
-$conn = new mysqli($host, $user, $pass, $db, (int)$port);
+// ── MySQLi ────────────────────────────────────────────────
+$conn = new mysqli($host, $user, $pass, $db, $port);
 if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
+    die("Error de conexión MySQLi: " . $conn->connect_error);
 }
 $conn->set_charset("utf8mb4");
 
-// ── PDO (nuevas funciones de auth/JWT) ────────────────────
+// ── PDO ───────────────────────────────────────────────────
 try {
     $pdo = new PDO(
-        "mysql:host=$host;port=$port;dbname=$db;charset=utf8mb4",
+        "mysql:host={$host};port={$port};dbname={$db};charset=utf8mb4",
         $user,
         $pass,
         [
